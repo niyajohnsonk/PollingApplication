@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create New Poll</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+    <body class="flex flex-col min-h-screen bg-white font-sans antialised">
+        <nav class="bg-green-800 p-6 text-white flex justify-between"> <!--p-6 and so on in this case determines the size of the nav bar-->
+            <div>
+                <h3 class="text-2xl font-bold">Create New Poll</h3>
+            </div>
+        </nav>
+
+
+        <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg">
+        <form class= "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="{{url_for("create_poll")}}" method="post">
+
+            <div class="mb-4">
+            <label class= "block text-gray-700 text-sm font-bold mb-2" for="poll">
+                Poll Text:
+                <input class= "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="poll" placeholder="Poll Text">
+            </label>
+            </div>
+            <br>
+
+            <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="option1">
+                Option 1:
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="option1" placeholder="Option 1">
+            </label>
+            </div>
+            <br>
+
+            <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="option2">
+                Option 2:
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="option2" placeholder="Option 2">
+            </label>
+            </div>
+            <br>
+
+            <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="option3">
+                Option 3:
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="option3" placeholder="Option 3">
+            </label>
+            </div>
+            <br>
+
+            <button class="bg-green-700  py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+            <input class="bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit" value="Create">
+            </button>
+        </form>
+        </div >
+    </body>
+</html>
+
+
