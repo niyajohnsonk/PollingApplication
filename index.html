@@ -1,0 +1,20 @@
+<body class="flex flex-col min-h-screen bg-white font-sans antialised">
+    <nav class="bg-green-800 p-6 text-white flex justify-between">
+    <div>
+    <h1 class="text-2xl font-bold" >Polling Application</h1>
+    </div>
+    </nav>
+    <h3 class="block text-gray-700 text-lg font-bold mb-2">Polls:</h3>
+    <br>
+    <ol>
+        {% for key,value in polls.iterrows()%} <!--to iterate over the dictionary-->
+        <li class= "block text-gray-700 text-lg italic mb-2"><a href="{{url_for("polls",poll_id=key)}}">{{value['poll']}}</a></li> <!--looks for polls functions-->
+        
+        {% endfor %}
+    </ol>
+    <br>
+    
+    <a class="text-black font-bold" href="{{url_for("create_poll")}}">Create new poll</a>
+
+</body>
+</html>
