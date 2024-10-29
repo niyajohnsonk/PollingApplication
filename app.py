@@ -18,9 +18,9 @@ if not os.path.exists("polls.csv"): #if such a path doesn't exist, make one firs
         "votes3":[],
     }
 
-    pd.DataFrame(structure).set_index("id").to_csv("polls.csv") #to convert data to dataframe into polls.csv
+    pd.DataFrame(structure).set_index("poll_id").to_csv("polls.csv") #to convert data to dataframe into polls.csv
 
-polls_df=pd.read_csv("polls.csv").set_index("id")
+polls_df=pd.read_csv("polls.csv").set_index(poll_"id")
 
 
 
